@@ -16,10 +16,11 @@
 //My Solution
 
 function removeSmallest(numbers) {
-    let arr = numbers
-    let smallestNum = Math.min(...arr)
-    let index =  numbers.indexOf(smallestNum)
-    arr.splice(index,1)
-    return arr
-  }
-  removeSmallest([1, 2, 3, 4, 5])
+  let arr = numbers.slice()
+  if(arr === []){return arr}
+  let smallestNum = Math.min(...arr)
+  let index =  numbers.indexOf(smallestNum)
+  arr.splice(index,1)
+  return arr
+}
+removeSmallest([1, 2, 3, 4, 5])
