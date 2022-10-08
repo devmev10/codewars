@@ -17,13 +17,12 @@
 
 // My Solution
 function sameCase(a, b){
-    let aU = a.toUpperCase()
-    let bU = b.toUpperCase()
-    let aL = a.toLowerCase()
-    let bL = b.toLowerCase()
-    
-    if( aL === aU || bL === bU){return -1} 
-    else if(aL === a && bL === b){return 1}
-    else if(aU === a && bU === b){return 1}
-    else{return 0}
-  }
+  let aU = a.toUpperCase()
+  let bU = b.toUpperCase()
+  let aL = a.toLowerCase()
+  let bL = b.toLowerCase()
+  
+  if( aL === aU || bL === bU){return -1} 
+  else if(aL === a && bL === b || aU === a && bU === b){return 1}
+  else{return 0}
+}
