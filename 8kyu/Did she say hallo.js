@@ -19,7 +19,11 @@
 // function should be case insensitive to pass the tests
 
 // My Solution
+
 function validateHello(greetings) {
+  greetings = greetings.replace(/[.,!?;:]/g, "");
   arr = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc']
-  return arr.includes(greetings.toLowerCase())
+  let a = greetings.toLowerCase().split(' ')
+  let b = a.filter(item => arr.includes(item))
+  return !!b.length
 }
