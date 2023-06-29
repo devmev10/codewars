@@ -49,7 +49,9 @@ function sing() {
     let line2 =
       "Take one down and pass it around, " +
       (i - 1) +
-      " bottles of beer on the wall.";
+      " bottle" +
+      (i - 1 !== 1 ? "s" : "") +
+      " of beer on the wall.";
 
     lyrics.push(line1, line2);
   }
