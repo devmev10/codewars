@@ -11,13 +11,4 @@
 // The function takes one argument (n) which is the integer to be converted to binary.
 
 // My Solution
-function intToBinaryArray(n) {
-    if (n >= 0) {
-      return n.toString(2).padStart(32, '0').split('').map(Number);
-    } else {
-      // Handle negative numbers using two's complement
-      n = -n;
-      const binary = (n ^ 0xFFFFFFFF).toString(2).slice(-32).split('').map(Number);
-      return binary.map(bit => bit ^ 1);
-    }
-  }
+const showBits = $ => [...($ >>> 0).toString(2).padStart(32, 0)].map(Number)
